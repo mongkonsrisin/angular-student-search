@@ -1,0 +1,9 @@
+<h1 class="mt-5 mb-3 text-center"><i class="fab fa-angular"></i><br>SSRU API</h1>
+<input (keyup)="searchTerm.next($event.target.value)" class="form-control" placeholder="Search...">
+<ul class="list-group mt-3" *ngIf="results">
+  <li class="list-group-item list-group-item-action" *ngFor="let result of results">
+      <strong>{{ result.fname }} {{ result.lname }}</strong>&nbsp;<span class="text-danger">({{ result.id }})</span> 
+      <br>
+      <small class="text-muted"><i class="fas fa-graduation-cap"></i> {{ result.major }} , {{ result.faculty }}</small>
+  </li>
+</ul>
